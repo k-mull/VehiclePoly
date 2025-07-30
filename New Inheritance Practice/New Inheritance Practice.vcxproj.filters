@@ -27,6 +27,9 @@
     <ClInclude Include="Motorcycle.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Mover.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Vehicle.cpp">
@@ -44,7 +47,7 @@
     <ClCompile Include="tester.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\Inheritance Practice\Inheritance Practice\Mover.cpp">
+    <ClCompile Include="Mover.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

@@ -1,20 +1,25 @@
 #include "Vehicle.h"
 
-Vehicle::Vehicle() {
+Vehicle::Vehicle()
+{
 	make = "unknown";
 	model = "unknown";
-	year = 0;
+	year = 2000;
+	mover = 65;
 }
-Vehicle::Vehicle(string make, string model, int year) {
+Vehicle::Vehicle(string make, string model, int year, Mover mover) {
 	this->make = make;
 	this->model = model;
 	this->year = year;
+	this->mover = mover;
 }
 Vehicle::Vehicle(Vehicle& otherVehicle) {
-	if (this != &otherVehicle) {
+	if (this != &otherVehicle)
+	{
 		this->make = otherVehicle.make;
 		this->model = otherVehicle.model;
 		this->year = otherVehicle.year;
+		this->mover = otherVehicle.mover;
 	}
 }
 
@@ -42,12 +47,25 @@ Vehicle& Vehicle::operator=(Vehicle& otherVehicle) {
 		this->make = otherVehicle.make;
 		this->model = otherVehicle.model;
 		this->year = otherVehicle.year;
+		this->mover = otherVehicle.mover;
 	}
 	return *this;
 }
 std::ostream& operator<<(std::ostream& strm, Vehicle& vehicle) {
 	strm << "A " << vehicle.getYear() << " "
 		<< vehicle.getMake() << " "
-		<< vehicle.getModel();
+		<< vehicle.getModel() << " " << vehicle.getMover().Move() << endl;
 	return strm;
+}
+Mover Vehicle::getMover()
+{
+	return mover;
+}
+void Vehicle::setMover(Mover mover)
+{
+	this->mover = mover;
+}
+Vehicle::Vehicle(Mover mover)
+{
+	mover = 0;
 }

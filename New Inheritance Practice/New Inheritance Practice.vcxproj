@@ -129,13 +129,14 @@
   <ItemGroup>
     <ClInclude Include="Car.h" />
     <ClInclude Include="Motorcycle.h" />
+    <ClInclude Include="Mover.h" />
     <ClInclude Include="Truck.h" />
     <ClInclude Include="Vehicle.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\Inheritance Practice\Inheritance Practice\Mover.cpp" />
     <ClCompile Include="Car.cpp" />
     <ClCompile Include="Motorcycle.cpp" />
+    <ClCompile Include="Mover.cpp" />
     <ClCompile Include="tester.cpp" />
     <ClCompile Include="Truck.cpp" />
     <ClCompile Include="Vehicle.cpp" />

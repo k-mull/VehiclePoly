@@ -19,11 +19,12 @@ private:
     double cargoCapacity;
 public:
     Truck();
-    Truck(string make, string model, int year, double cargoCapacity);
+    Truck(string make, string model, int year, double cargoCapacity, Mover mover);
     Truck(Truck& otherTruck);
     double getCargoCapacity();
     void setCargoCapacity(double cargoCapacity);
     Truck& operator=(Truck& otherTruck);
+    string move() override;
     friend ostream& operator<<(ostream& strm, Truck& Truck);
 };
 
